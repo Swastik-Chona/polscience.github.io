@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergence of Party Politics in Arunachal Pradesh</title>
+    <style>
+        /* General Styles */
+        body { 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Beige background */
+            color: black;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff176; /* Pastel Yellow */
+            padding: 20px;
+            text-align: center;
+            color: black;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            width: 200px;
+            background-color: #b2ebf2; /* Pastel Cyan */
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #80deea; /* Lighter Cyan */
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        main section {
+            margin-bottom: 40px;
+        }
+
+        main section h2 {
+            margin-bottom: 10px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: black;
+        }
+
+        main section p, main section ul, main section li {
+            font-family: 'Arial', sans-serif;
+            color: black;
+        }
+
+        footer {
+            background-color: #b2ebf2; /* Pastel Cyan */
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Emergence of Party Politics in Arunachal Pradesh</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#graphs">Seat Distribution</a></li>
+            <li><a href="#ideology">Ideology and Objectives</a></li>
+            <li><a href="#role">Role of Regional Parties</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="summary">
+            <h2>Summary of Political Parties in Arunachal Pradesh</h2>
+            <p>Arunachal Pradesh, formerly known as NEFA (North East Frontier Agency), has gradually embraced party politics since the early 1970s. The region, initially a part of Assam, experienced political awakening with the formation of the Indian National Congress (INC) in the state. Over the years, several political parties have emerged, reflecting diverse ideologies and interests.</p>
+            <p>Today, Arunachal Pradesh hosts a mix of regional and national political parties. Key parties include the Indian National Congress (INC), Bharatiya Janata Party (BJP), People's Party of Arunachal (PPA), and Arunachal Congress (AC). These parties compete in both state and national elections, shaping the political landscape of the region.</p>
+        </section>
+        <section id="graphs">
+            <h2>Seat Distribution in State and National Elections</h2>
+            <p>Below are bar charts illustrating the seat distribution among different political parties in recent state and national elections:</p>
+            <canvas id="seatDistributionChart" width="400" height="200"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                // Example data (replace with actual data)
+                const parties = ['INC', 'BJP', 'PPA', 'AC'];
+                const seatsState = [20, 15, 10, 5];
+                const seatsNational = [5, 10, 8, 12];
+
+                // Create chart
+                const ctx = document.getElementById('seatDistributionChart').getContext('2d');
+                const chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: parties,
+                        datasets: [{
+                            label: 'State Elections',
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                            data: seatsState
+                        }, {
+                            label: 'National Elections',
+                            backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                            data: seatsNational
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </section>
+        <section id="ideology">
+            <h2>Ideology and Objectives of Political Parties</h2>
+            <p>Each political party in Arunachal Pradesh is guided by distinct ideologies and objectives:</p>
+            <ul>
+                <li><strong>Indian National Congress (INC):</strong> Historically associated with secularism and social justice, focusing on welfare policies.</li>
+                <li><strong>Bharatiya Janata Party (BJP):</strong> Advocates for nationalism, Hindutva ideology, and economic reforms.</li>
+                <li><strong>People's Party of Arunachal (PPA):</strong> Emphasizes regional autonomy, cultural preservation, and sustainable development.</li>
+                <li><strong>Arunachal Congress (AC):</strong> Prioritizes local issues, infrastructure development, and governance reforms.</li>
+            </ul>
+        </section>
+        <section id="role">
+            <h2>Role of Regional Parties</h2>
+            <p>Regional parties play a crucial role in Arunachal Pradesh's political scenario:</p>
+            <ul>
+                <li>They represent local interests and aspirations more effectively than national parties.</li>
+                <li>They advocate for regional autonomy, cultural preservation, and sustainable development.</li>
+                <li>Regional parties often form alliances with national parties to maximize electoral success.</li>
+                <li>They contribute to coalition governments and policy-making at the state level.</li>
+            </ul>
+        </section>
+    </main>
+    
+</body>
+</html>
